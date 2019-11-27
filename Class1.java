@@ -20,15 +20,8 @@ public class Class1 {
 		myMatrix.build("filename");
 		startTimeMS = System.currentTimeMillis();
 		myMatrix.bruteForce(1, 0, 0);
-		endTimeMS = System.currentTimeMillis();
+		endTimeMS = myMatrix.endTimeMSInMatrix;
 		System.out.println(endTimeMS-startTimeMS);
 
 		}
-		
-		//int x = 3;
-		//TestClass tstClass = new TestClass(x);
-		//System.out.println(tstClass.testNum);
-		
-	
-
 }
