@@ -5,6 +5,7 @@ import java.lang.*;
 
 
 
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -14,21 +15,17 @@ public class Class1 {
 	public static void main(String[] args) throws IOException {
 		long startTimeMS;
 		long endTimeMS;
-		// TODO Auto-generated method stub
+		long milisecondTime;
+
 		Matrix myMatrix = null;
 		myMatrix = new Matrix();
 		myMatrix.build("filename");
-		startTimeMS = System.currentTimeMillis();
+		startTimeMS = System.nanoTime();
 		myMatrix.bruteForce(1, 0, 0);
-		endTimeMS = System.currentTimeMillis();
-		System.out.println(endTimeMS-startTimeMS);
+		endTimeMS = myMatrix.endTimeMSInMatrix;
+		milisecondTime = (endTimeMS - startTimeMS) / 1000;
+		System.out.println(" ");
+		System.out.print("Time to slay Soduko:  " + Long.toString(milisecondTime) + " Miliseconds");
 
 		}
-		
-		//int x = 3;
-		//TestClass tstClass = new TestClass(x);
-		//System.out.println(tstClass.testNum);
-		
-	
-
 }
